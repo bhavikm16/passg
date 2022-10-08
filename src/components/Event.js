@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './Event.css';
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from "react-router-dom";
 function Event() {
+  const navigate = useNavigate();
   let [eventList, setEventList] = useState([]);
   useEffect(() => {
     axios
@@ -30,9 +33,7 @@ function Event() {
                   <br />
                   "Hurry up!!  only {element.Tlimit} remaining"
                 </h6>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
+                <Button variant="outline-warning" onClick={()=>{navigate("/Key")}}>EDIT/UPDATE</Button>
                 </div>
               </div>
             </div>

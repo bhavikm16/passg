@@ -12,7 +12,7 @@ function Home() {
                 <div className="child1">
                     <h1>BUY</h1>
                     <center>
-                    <Button variant="outline-dark" onClick={()=>{navigate("/Event")}}>Buy the tickets!</Button>
+                    <Button variant="outline-dark" onClick={()=>{navigate("/ViewEvents")}}>Buy the tickets!</Button>
                     </center>
                 </div>
                 <div className="child2">

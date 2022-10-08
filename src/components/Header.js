@@ -7,6 +7,8 @@ import HostEvent from './HostEvent';
 import Login from './Login';
 import Event from './Event';
 import Signup from './Signup';
+import Key from './Key';
+import ViewEvents from './ViewEvents'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, Navigate } from 'react-router-dom'
 import { clearLoginStatus } from '../Slices/userSlice'
@@ -98,7 +100,8 @@ function Header() {
         <Route path="/HostEvent" element={<HostEvent />} />
         <Route path="/Event" element={<Event />} />
         <Route path="/Signup" element={<Signup />} />
-
+        <Route path="/Key" element={<Key />} />
+        <Route path="/ViewEvents" element={<ViewEvents />} />
       </Routes>
     </>
   )

@@ -43,7 +43,7 @@ function HostEvent() {
               {...register("username", {
                 required: true,
                 minLength: 4,
-                maxLength: 6,
+                maxLength: 10,
               })}
             />
             {/* validation error msg for username */}
@@ -54,7 +54,7 @@ function HostEvent() {
               <p className="text-danger">* Min length should be 4</p>
             )}
             {errors.username?.type === "maxLength" && (
-              <p className="text-danger">* Max length should be 6</p>
+              <p className="text-danger">* Max length should be 10</p>
             )}
           </div>
           {/* email */}
@@ -162,6 +162,19 @@ function HostEvent() {
               placeholder="ex : 29"
               className="form-control"
               {...register("Tlimit", { required: true })}
+            />
+            {/* validation error msg for email */}
+            {errors.Tlimit?.type === "required" && (
+              <p className="text-danger">*this field is required</p>
+            )}
+          </div>
+          <div className="mb-3">
+            <label htmlFor="Tlimit">KEY</label>
+            <input
+              type="number"
+              id="key"
+              className="form-control"
+              {...register("key", { required: true })}
             />
             {/* validation error msg for email */}
             {errors.Tlimit?.type === "required" && (
