@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { addEvent } from "../Slices/EventSlice";
 import { useDispatch } from "react-redux";
 import axios from "axios";
-
+import Button from 'react-bootstrap/Button';
 function HostEvent() {
   const {
     register,
@@ -189,6 +189,10 @@ function HostEvent() {
           >
             Submit
           </button>
+          <center>
+            <Button variant="outline-dark" onClick={() => { navigate("/Event") }}>ViewEvents!</Button>
+          </center>
+
         </form>
       </div>
     </div>
